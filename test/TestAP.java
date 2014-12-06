@@ -63,7 +63,11 @@ public class TestAP {
         porte1.setDoorsPosition(DoorsEnum.OUVERT);
         manette.setPosition(HandleEnum.BAS);
 <<<<<<< HEAD
+<<<<<<< HEAD
         Assert.assertEquals(WheelsEnum.MOUVEMENT, roue1.mouvRoue(porte1, manette));
+=======
+        Assert.assertEquals(WheelsEnum.MOUVEMENT, roue1.MouvRoue(porte1, manette));
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
 =======
         Assert.assertEquals(WheelsEnum.MOUVEMENT, roue1.MouvRoue(porte1, manette));
 >>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
@@ -76,7 +80,11 @@ public class TestAP {
         manette.setPosition(HandleEnum.HAUT);
         roue1.setEtat(WheelsEnum.SORTI);
 <<<<<<< HEAD
+<<<<<<< HEAD
         Assert.assertEquals(WheelsEnum.MOUVEMENT, roue1.mouvRoue(porte1, manette));
+=======
+        Assert.assertEquals(WheelsEnum.MOUVEMENT, roue1.MouvRoue(porte1, manette));
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
 =======
         Assert.assertEquals(WheelsEnum.MOUVEMENT, roue1.MouvRoue(porte1, manette));
 >>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
@@ -89,7 +97,11 @@ public class TestAP {
         manette.setPosition(HandleEnum.HAUT);
         roue1.setEtat(WheelsEnum.MOUVEMENT);
 <<<<<<< HEAD
+<<<<<<< HEAD
         Assert.assertEquals(WheelsEnum.RENTRE, roue1.mouvRoue(porte1, manette));
+=======
+        Assert.assertEquals(WheelsEnum.RENTRE, roue1.MouvRoue(porte1, manette));
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
 =======
         Assert.assertEquals(WheelsEnum.RENTRE, roue1.MouvRoue(porte1, manette));
 >>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
@@ -102,7 +114,11 @@ public class TestAP {
         manette.setPosition(HandleEnum.BAS);
         roue1.setEtat(WheelsEnum.MOUVEMENT);
 <<<<<<< HEAD
+<<<<<<< HEAD
         Assert.assertEquals(WheelsEnum.SORTI, roue1.mouvRoue(porte1, manette));
+=======
+        Assert.assertEquals(WheelsEnum.SORTI, roue1.MouvRoue(porte1, manette));
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
 =======
         Assert.assertEquals(WheelsEnum.SORTI, roue1.MouvRoue(porte1, manette));
 >>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
@@ -115,7 +131,11 @@ public class TestAP {
         manette.setPosition(HandleEnum.HAUT);
         roue1.setEtat(WheelsEnum.SORTI);
 <<<<<<< HEAD
+<<<<<<< HEAD
         Assert.assertEquals(null, roue1.mouvRoue(porte1, manette));
+=======
+        Assert.assertEquals(null, roue1.MouvRoue(porte1, manette));
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
 =======
         Assert.assertEquals(null, roue1.MouvRoue(porte1, manette));
 >>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
@@ -131,7 +151,11 @@ public class TestAP {
         manette.setPosition(HandleEnum.BAS);
         roue1.setEtat(WheelsEnum.MOUVEMENT);
 <<<<<<< HEAD
+<<<<<<< HEAD
         Assert.assertEquals(null, porte1.mouvPorte(manette, roue1));
+=======
+        Assert.assertEquals(null, porte1.MouvPorte(manette, roue1));
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
 =======
         Assert.assertEquals(null, porte1.MouvPorte(manette, roue1));
 >>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
@@ -143,7 +167,11 @@ public class TestAP {
         manette.setPosition(HandleEnum.HAUT);
         roue1.setEtat(WheelsEnum.SORTI);
 <<<<<<< HEAD
+<<<<<<< HEAD
         Assert.assertEquals(DoorsEnum.OUVERT, porte1.mouvPorte(manette, roue1));
+=======
+        Assert.assertEquals(DoorsEnum.OUVERT, porte1.MouvPorte(manette, roue1));
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
 =======
         Assert.assertEquals(DoorsEnum.OUVERT, porte1.MouvPorte(manette, roue1));
 >>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
@@ -155,7 +183,11 @@ public class TestAP {
         manette.setPosition(HandleEnum.HAUT);
         roue1.setEtat(WheelsEnum.SORTI);
 <<<<<<< HEAD
+<<<<<<< HEAD
         Assert.assertEquals(DoorsEnum.OUVERT, porte1.mouvPorte(manette, roue1));
+=======
+        Assert.assertEquals(DoorsEnum.OUVERT, porte1.MouvPorte(manette, roue1));
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
 =======
         Assert.assertEquals(DoorsEnum.OUVERT, porte1.MouvPorte(manette, roue1));
 >>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b

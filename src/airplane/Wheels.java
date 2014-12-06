@@ -13,7 +13,11 @@ package airplane;
 public class Wheels {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private WheelsEnum etat = WheelsEnum.RENTRE;
+=======
+    WheelsEnum etat = WheelsEnum.RENTRE;
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
 =======
     WheelsEnum etat = WheelsEnum.RENTRE;
 >>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
@@ -27,7 +31,11 @@ public class Wheels {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public WheelsEnum mouvRoue(Doors porte, Handle manette) {
+=======
+    public WheelsEnum MouvRoue(Doors porte, Handle manette) {
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
 =======
     public WheelsEnum MouvRoue(Doors porte, Handle manette) {
 >>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b

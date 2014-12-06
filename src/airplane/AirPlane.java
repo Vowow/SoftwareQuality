@@ -7,6 +7,10 @@ package airplane;
 
 /**
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+ *
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
 =======
  *
 >>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
@@ -15,6 +19,10 @@ package airplane;
  */
 public class AirPlane {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
 =======
 
 >>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
@@ -23,6 +31,10 @@ public class AirPlane {
      */
     public static void main(String[] args) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        // TODO code application logic here
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
 =======
         // TODO code application logic here
 >>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
@@ -51,11 +63,14 @@ public class AirPlane {
 
         /* Create and display the form */
 <<<<<<< HEAD
+<<<<<<< HEAD
         java.awt.EventQueue.invokeLater(() -> {
             new View().setVisible(true);
         });
     }
 =======
+=======
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new View().setVisible(true);
@@ -63,5 +78,8 @@ public class AirPlane {
         });
     }
 
+<<<<<<< HEAD
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
+=======
 >>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
 }

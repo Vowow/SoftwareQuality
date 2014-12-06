@@ -13,7 +13,11 @@ package airplane;
 public class Lights {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private LightsEnum color = LightsEnum.ETEINT;
+=======
+    LightsEnum color = LightsEnum.ETEINT;
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
 =======
     LightsEnum color = LightsEnum.ETEINT;
 >>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
@@ -32,6 +36,7 @@ public class Lights {
             color = LightsEnum.ETEINT;
             return color;
 <<<<<<< HEAD
+<<<<<<< HEAD
         } // ORANGE (une roue est en mouvement)   
         else if (roue1.getEtat() == WheelsEnum.MOUVEMENT || roue2.getEtat() == WheelsEnum.MOUVEMENT || roue3.getEtat() == WheelsEnum.MOUVEMENT ) {
             color = LightsEnum.ORANGE;
@@ -42,11 +47,16 @@ public class Lights {
             return color;
         }//VERT (la manette est en position basse, les roues sont sorties et les portes sont fermées
 =======
+=======
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
         } // ORANGE (une roue est en mouvement ou une porte est ouverte        
         else if (roue1.getEtat() == WheelsEnum.MOUVEMENT || roue2.getEtat() == WheelsEnum.MOUVEMENT || roue3.getEtat() == WheelsEnum.MOUVEMENT || porte1.getPosition() == DoorsEnum.OUVERT || porte2.getPosition() == DoorsEnum.OUVERT || porte3.getPosition() == DoorsEnum.OUVERT) {
             color = LightsEnum.ORANGE;
             return color;
         } //VERT (la manette est en position basse, les roues sont sorties et les portes sont fermées
+<<<<<<< HEAD
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
+=======
 >>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
         else if (manette.getPosition() == HandleEnum.BAS && roue1.getEtat() == WheelsEnum.SORTI && roue2.getEtat() == WheelsEnum.SORTI && roue3.getEtat() == WheelsEnum.SORTI && porte1.getPosition() == DoorsEnum.FERME && porte2.getPosition() == DoorsEnum.FERME && porte3.getPosition() == DoorsEnum.FERME) {
             color = LightsEnum.VERT;
@@ -54,6 +64,10 @@ public class Lights {
         } //ERREUR ROUGE
         else {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            //System.out.println(roue1.getEtat()+ " " +roue2.getEtat()+ " " +roue3.getEtat()+ " " + porte1.getPosition()+ " " +porte2.getPosition()+ " " +porte3.getPosition());
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
 =======
             //System.out.println(roue1.getEtat()+ " " +roue2.getEtat()+ " " +roue3.getEtat()+ " " + porte1.getPosition()+ " " +porte2.getPosition()+ " " +porte3.getPosition());
 >>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b

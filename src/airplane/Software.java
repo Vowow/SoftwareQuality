@@ -17,6 +17,7 @@ import javax.swing.Timer;
 public class Software {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private Lights voyant = new Lights();
     private Wheels roue1 = new Wheels();
     private Wheels roue2 = new Wheels();
@@ -42,6 +43,8 @@ public class Software {
             
             //Simulation du temps de déploiement/rétractaion des roues
 =======
+=======
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
     Lights voyant = new Lights();
     Wheels roue1 = new Wheels();
     Wheels roue2 = new Wheels();
@@ -65,15 +68,24 @@ public class Software {
             vue.log("Roue en mouvement \n");
             vue.moveLights(voyant.animLights(manette, roue1, roue2, roue3, porte1, porte2, porte3));
 
+<<<<<<< HEAD
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
+=======
 >>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
             Timer timer = new Timer(3000, new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent arg0) {
                     //on sorte ou on rentre les roues
 <<<<<<< HEAD
+<<<<<<< HEAD
                     roue1.mouvRoue(porte1, manette);
                     roue2.mouvRoue(porte2, manette);
                     roue3.mouvRoue(porte3, manette);
+=======
+                    roue1.MouvRoue(porte1, manette);
+                    roue2.MouvRoue(porte2, manette);
+                    roue3.MouvRoue(porte3, manette);
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
 =======
                     roue1.MouvRoue(porte1, manette);
                     roue2.MouvRoue(porte2, manette);
@@ -88,9 +100,15 @@ public class Software {
                     }
                     //on fermes les portes
 <<<<<<< HEAD
+<<<<<<< HEAD
                     porte1.mouvPorte(manette, roue1);
                     porte2.mouvPorte(manette, roue2);
                     porte3.mouvPorte(manette, roue3);
+=======
+                    porte1.MouvPorte(manette, roue1);
+                    porte2.MouvPorte(manette, roue2);
+                    porte3.MouvPorte(manette, roue3);
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
 =======
                     porte1.MouvPorte(manette, roue1);
                     porte2.MouvPorte(manette, roue2);

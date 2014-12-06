@@ -6,12 +6,15 @@
 package airplane;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JTextArea;
 
 =======
+=======
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -19,6 +22,9 @@ import java.awt.event.ActionListener;
 import javax.swing.JTextArea;
 import javax.swing.Timer;
 import javax.swing.UIManager;
+<<<<<<< HEAD
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
+=======
 >>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
 
 /**
@@ -27,16 +33,22 @@ import javax.swing.UIManager;
  * @author Sacha MASSON
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 public final class View extends javax.swing.JFrame implements ActionListener {
 
     private Handle manette = new Handle();
     private Software soft = new Software();
 =======
+=======
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
 public class View extends javax.swing.JFrame implements ActionListener {
 
     Lights voyant = new Lights();
     Handle manette = new Handle();
     Software soft = new Software();
+<<<<<<< HEAD
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
+=======
 >>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
     private JTextArea textArea;
 
@@ -49,8 +61,13 @@ public class View extends javax.swing.JFrame implements ActionListener {
         jButton1.setEnabled(false);
         jButton2.setEnabled(true);
 <<<<<<< HEAD
+<<<<<<< HEAD
         //on initialise les voyants à éteint
         moveLights(LightsEnum.ETEINT);
+=======
+        moveLights(LightsEnum.ETEINT);//on initialise les voyants à éteint
+        View();
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
 =======
         moveLights(LightsEnum.ETEINT);//on initialise les voyants à éteint
         View();
@@ -62,7 +79,10 @@ public class View extends javax.swing.JFrame implements ActionListener {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     //Gestion des voyants
+=======
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
 =======
 >>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
     public void moveLights(LightsEnum couleur) {
@@ -96,7 +116,13 @@ public class View extends javax.swing.JFrame implements ActionListener {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+    public void View() {
+
+    }
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
 =======
     public void View() {
 
@@ -235,6 +261,7 @@ public class View extends javax.swing.JFrame implements ActionListener {
 
         //Handle UP
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (source.equals(jButton2)) {
             manette.setPosition(HandleEnum.BAS);
             textArea.append("Début de la séquence d'atterissage\n");
@@ -252,6 +279,8 @@ public class View extends javax.swing.JFrame implements ActionListener {
             jButton2.setEnabled(true);
             soft.doSoft(manette, this);
 =======
+=======
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
         if (source == jButton2) {
             manette.setPosition(HandleEnum.BAS);
             textArea.append("Début de la séquence d'atterissage\n");
@@ -266,6 +295,9 @@ public class View extends javax.swing.JFrame implements ActionListener {
             jButton1.setEnabled(false);
             jButton2.setEnabled(true);
             soft.Software(manette, this);
+<<<<<<< HEAD
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
+=======
 >>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
 
         }

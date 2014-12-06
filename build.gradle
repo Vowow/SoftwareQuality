@@ -5,6 +5,26 @@ apply plugin: 'sonar'
 sourceCompatibility = 1.8
 version = '0.0'
 
+sourceSets {
+test {
+java {
+srcDir 'test'
+}
+}
+}
+sourceSets {
+main {
+java {
+srcDir 'src/AirPlane'
+}
+}
+test {
+java {
+srcDir 'test'
+}
+}
+}
+
 // publish JAR file
 uploadArchives {
     repositories {

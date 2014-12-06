@@ -1,8 +1,8 @@
 apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'sonar'
-
-sourceCompatibility = 1.8
+apply plugin: 'sonar-runner'
+sourceCompatibility = 1.7
 version = '0.0'
 
 sourceSets {
@@ -54,12 +54,15 @@ test {
     }
 }
 
-sonar {
-    server {
-        url = 'http://87.98.155.63:9000/'
+sonarRunner {
+
+    sonarProperties {
+        property "sonar.host.url", "http://87.98.155.63:9000/"
+        property "sonar.projectKey", "airplane"
+        property "sonar.name", "Airplane"
+        property "sonar.sourceEncoding", "UTF-8"
     }
 }
-
 repositories {
     mavenCentral()
 }

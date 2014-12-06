@@ -12,7 +12,11 @@ package airplane;
  */
 public class Wheels {
 
+<<<<<<< HEAD
     private WheelsEnum etat = WheelsEnum.RENTRE;
+=======
+    WheelsEnum etat = WheelsEnum.RENTRE;
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
 
     public WheelsEnum getEtat() {
         return etat;
@@ -22,7 +26,11 @@ public class Wheels {
         this.etat = etat;
     }
 
+<<<<<<< HEAD
     public WheelsEnum mouvRoue(Doors porte, Handle manette) {
+=======
+    public WheelsEnum MouvRoue(Doors porte, Handle manette) {
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
         //phase atterissage - mise en mouvement
         if (porte.getPosition() == DoorsEnum.OUVERT && this.etat == WheelsEnum.RENTRE && manette.getPosition() == HandleEnum.BAS) {
             etat = WheelsEnum.MOUVEMENT;

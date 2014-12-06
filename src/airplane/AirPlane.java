@@ -6,14 +6,26 @@
 package airplane;
 
 /**
+<<<<<<< HEAD
+=======
+ *
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
  * @author Martin LEGRIS
  * @author Sacha MASSON
  */
 public class AirPlane {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+<<<<<<< HEAD
+=======
+        // TODO code application logic here
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
     /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -38,8 +50,18 @@ public class AirPlane {
         //</editor-fold>
 
         /* Create and display the form */
+<<<<<<< HEAD
         java.awt.EventQueue.invokeLater(() -> {
             new View().setVisible(true);
         });
     }
+=======
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new View().setVisible(true);
+            }
+        });
+    }
+
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
 }

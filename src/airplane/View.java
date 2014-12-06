@@ -5,21 +5,39 @@
  */
 package airplane;
 
+<<<<<<< HEAD
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JTextArea;
 
+=======
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JTextArea;
+import javax.swing.Timer;
+import javax.swing.UIManager;
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
 
 /**
  *
  * @author Martin LEGRIS
  * @author Sacha MASSON
  */
+<<<<<<< HEAD
 public final class View extends javax.swing.JFrame implements ActionListener {
 
     private Handle manette = new Handle();
     private Software soft = new Software();
+=======
+public class View extends javax.swing.JFrame implements ActionListener {
+
+    Lights voyant = new Lights();
+    Handle manette = new Handle();
+    Software soft = new Software();
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
     private JTextArea textArea;
 
     View() {
@@ -30,15 +48,23 @@ public final class View extends javax.swing.JFrame implements ActionListener {
         jRadioButton4.setEnabled(false);
         jButton1.setEnabled(false);
         jButton2.setEnabled(true);
+<<<<<<< HEAD
         //on initialise les voyants à éteint
         moveLights(LightsEnum.ETEINT);
+=======
+        moveLights(LightsEnum.ETEINT);//on initialise les voyants à éteint
+        View();
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
     }
 
     public void log(String s) {
         textArea.append(s);
     }
 
+<<<<<<< HEAD
     //Gestion des voyants
+=======
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
     public void moveLights(LightsEnum couleur) {
         if (couleur == LightsEnum.ORANGE) {
             jRadioButton1.setSelected(false);
@@ -69,7 +95,13 @@ public final class View extends javax.swing.JFrame implements ActionListener {
         }
     }
 
+<<<<<<< HEAD
 
+=======
+    public void View() {
+
+    }
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -202,6 +234,7 @@ public final class View extends javax.swing.JFrame implements ActionListener {
         Object source = e.getSource();
 
         //Handle UP
+<<<<<<< HEAD
         if (source.equals(jButton2)) {
             manette.setPosition(HandleEnum.BAS);
             textArea.append("Début de la séquence d'atterissage\n");
@@ -218,6 +251,22 @@ public final class View extends javax.swing.JFrame implements ActionListener {
             jButton1.setEnabled(false);
             jButton2.setEnabled(true);
             soft.doSoft(manette, this);
+=======
+        if (source == jButton2) {
+            manette.setPosition(HandleEnum.BAS);
+            textArea.append("Début de la séquence d'atterissage\n");
+            jButton2.setEnabled(false);
+            jButton1.setEnabled(true);
+            soft.Software(manette, this);
+
+            //Handle Down
+        } else if (source == jButton1) {
+            manette.setPosition(HandleEnum.HAUT);
+            textArea.append("Début de la séquence de décollage\n");
+            jButton1.setEnabled(false);
+            jButton2.setEnabled(true);
+            soft.Software(manette, this);
+>>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
 
         }
     }

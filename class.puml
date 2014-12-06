@@ -1,0 +1,29 @@
+@startuml
+annotation java.lang.Override
+annotation java.lang.SuppressWarnings
+class airplane.AirPlane
+class airplane.Doors
+class airplane.Handle
+class airplane.Lights
+class airplane.Software
+class airplane.Wheels
+class java.awt.Color
+class java.awt.event.ActionEvent
+class javax.swing.JFrame
+class javax.swing.JTextArea
+class javax.swing.Timer
+class javax.swing.UIManager
+enum airplane.DoorsEnum
+enum airplane.LightsEnum
+enum airplane.WheelsEnum
+interface java.awt.event.ActionListener
+airplane.Software ..> java.lang.Override
+airplane.Software ..> java.lang.SuppressWarnings
+airplane.Software ..> java.awt.Color
+airplane.Software ..> java.awt.event.ActionEvent
+airplane.Software --|> javax.swing.JFrame
+airplane.Software ..> javax.swing.JTextArea
+airplane.Software ..> javax.swing.Timer
+airplane.Software ..> javax.swing.UIManager
+airplane.Software --|> java.awt.event.ActionListener
+@enduml

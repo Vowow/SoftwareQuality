@@ -11,18 +11,8 @@ package airplane;
  * @author Sacha MASSON
  */
 public class Handle {
-<<<<<<< HEAD
-<<<<<<< HEAD
     //false => handle up; true = > handle down
     private HandleEnum position = HandleEnum.HAUT; 
-=======
-
-    HandleEnum position = HandleEnum.HAUT; //false => handle up; true = > handle down
->>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
-=======
-
-    HandleEnum position = HandleEnum.HAUT; //false => handle up; true = > handle down
->>>>>>> 55a69ebce21e659bc3e0cfcc79bc0db7b552ea6b
 
     public HandleEnum getPosition() {
         return position;

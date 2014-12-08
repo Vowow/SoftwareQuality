@@ -10,6 +10,7 @@ package airplane;
  * @author Martin LEGRIS
  * @author Sacha MASSON
  */
+/** Define two states for Doors: OPEN and CLOSE*/
 public enum DoorsEnum {
 
     OUVERT,

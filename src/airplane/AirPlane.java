@@ -8,7 +8,11 @@ package airplane;
 /**
  * @author Martin LEGRIS
  * @author Sacha MASSON
+ * @author Project 18
  */
+
+
+/** Main*/
 public class AirPlane {
     /**
      * @param args the command line arguments

@@ -10,6 +10,8 @@ package airplane;
  * @author Martin LEGRIS
  * @author Sacha MASSON
  */
+
+/** Handle Manager: keep position of the handle */
 public class Handle {
     //false => handle up; true = > handle down
     private HandleEnum position = HandleEnum.HAUT; 

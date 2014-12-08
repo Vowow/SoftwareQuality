@@ -10,6 +10,8 @@ package airplane;
  * @author Martin LEGRIS
  * @author Sacha MASSON
  */
+
+/** Door Manager: keep position of the door and managing movements */
 public class Doors {
 
     private DoorsEnum position;

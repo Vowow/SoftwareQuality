@@ -9,6 +9,8 @@ package airplane;
  * @author Martin LEGRIS
  * @author Sacha MASSON
  */
+
+/** Define three states for Wheels: INSIDE, MOVING, OUT*/
 public enum WheelsEnum {
     RENTRE,
     MOUVEMENT,

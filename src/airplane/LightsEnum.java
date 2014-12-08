@@ -10,6 +10,8 @@ package airplane;
  * @author Martin LEGRIS
  * @author Sacha MASSON
  */
+
+/** Define four states for Lights: OFF, RED, ORANGE, GREEN*/
 public enum LightsEnum {
 
     ETEINT,

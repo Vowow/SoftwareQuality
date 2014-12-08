@@ -10,6 +10,8 @@ package airplane;
  * @author Martin LEGRIS
  * @author Sacha MASSON
  */
+
+/** Lights Manager: keep position of the lights and managing animation */
 public class Lights {
 
     private LightsEnum color = LightsEnum.ETEINT;

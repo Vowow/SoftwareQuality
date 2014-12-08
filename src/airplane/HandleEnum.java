@@ -10,6 +10,8 @@ package airplane;
  * @author Martin LEGRIS
  * @author Sacha MASSON
  */
+
+/** Define two states for Handle: UP and DOWN*/
 public enum HandleEnum {
 
     HAUT,

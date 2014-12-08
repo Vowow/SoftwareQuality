@@ -16,6 +16,8 @@ import javax.swing.JTextArea;
  * @author Martin LEGRIS
  * @author Sacha MASSON
  */
+
+/** Generates the Swing View */
 public final class View extends javax.swing.JFrame implements ActionListener {
 
     private Handle manette = new Handle();

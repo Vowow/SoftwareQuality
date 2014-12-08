@@ -10,6 +10,8 @@ package airplane;
  * @author Martin LEGRIS
  * @author Sacha MASSON
  */
+
+/** Wheels Manager: keep position of the wheels and managing movements */ 
 public class Wheels {
 
     private WheelsEnum etat = WheelsEnum.RENTRE;

@@ -14,6 +14,8 @@ import javax.swing.Timer;
  * @author Martin LEGRIS
  * @author Sacha MASSON
  */
+
+/** Manages the differents operations and interactions between Doors, Handle, Lights and Wheels */
 public class Software {
 
     private Lights voyant = new Lights();

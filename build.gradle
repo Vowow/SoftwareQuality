@@ -15,7 +15,7 @@ srcDir 'test'
 sourceSets {
 main {
 java {
-srcDir 'src/AirPlane'
+srcDir 'src/airplane'
 }
 }
 test {

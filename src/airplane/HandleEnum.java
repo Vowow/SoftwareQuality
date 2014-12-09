@@ -13,7 +13,6 @@ package airplane;
 
 /** Define two states for Handle: UP and DOWN*/
 public enum HandleEnum {
-
     HAUT,
     BAS,
 }

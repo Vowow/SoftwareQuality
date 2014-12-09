@@ -18,7 +18,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
 * @author Martin LEGRIS
@@ -156,6 +155,18 @@ public class TestAP {
         roue2.setEtat(WheelsEnum.SORTI);
         roue3.setEtat(WheelsEnum.SORTI);
         Assert.assertEquals(LightsEnum.VERT, voyant.animLights(manette, roue1, roue2, roue3, porte1, porte2, porte3));
+    }
+    
+    @Test
+    public void testLight2() {
+        porte1.setDoorsPosition(DoorsEnum.FERME);
+        porte2.setDoorsPosition(DoorsEnum.FERME);
+        porte3.setDoorsPosition(DoorsEnum.FERME);
+        manette.setPosition(HandleEnum.BAS);
+        roue1.setEtat(WheelsEnum.MOUVEMENT);
+        roue2.setEtat(WheelsEnum.SORTI);
+        roue3.setEtat(WheelsEnum.SORTI);
+        Assert.assertEquals(LightsEnum.ROUGE, voyant.animLights(manette, roue1, roue2, roue3, porte1, porte2, porte3));
     }
 
 

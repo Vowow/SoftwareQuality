@@ -1,3 +1,5 @@
+package airplane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -25,7 +27,7 @@ import org.junit.Test;
 * @author Martin LEGRIS
 * @author Sacha MASSON
  */
-public class TestAP {
+public class ScenarioTest {
     Software soft = new Software();
     //View vue = new View();
     Handle manette = new Handle();
@@ -38,7 +40,7 @@ public class TestAP {
     Lights voyant = new Lights();
     
 
-    public TestAP() {
+    public ScenarioTest() {
     }
 
     @BeforeClass

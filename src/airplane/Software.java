@@ -25,7 +25,14 @@ public class Software {
     private Doors porte1 = new Doors();
     private Doors porte2 = new Doors();
     private Doors porte3 = new Doors();
+    private final int waitTime = 3000;
 
+    /**
+     *
+     * @param manette
+     * @param vue
+     * @return
+     */
     public boolean doSoft(Handle manette, View vue) {
         try {
             //on ouvre les portes
@@ -42,7 +49,7 @@ public class Software {
             vue.moveLights(voyant.animLights(manette, roue1, roue2, roue3, porte1, porte2, porte3));
             
             //Simulation du temps de déploiement/rétractaion des roues
-            Timer timer = new Timer(3000, new ActionListener() {
+            Timer timer = new Timer(waitTime, new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent arg0) {
                     //on sorte ou on rentre les roues

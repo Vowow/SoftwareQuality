@@ -12,7 +12,19 @@ package airplane;
 
 /** Define three states for Wheels: INSIDE, MOVING, OUT*/
 public enum WheelsEnum {
+
+    /**
+     *
+     */
     RENTRE,
+
+    /**
+     *
+     */
     MOUVEMENT,
+
+    /**
+     *
+     */
     SORTI;
 }

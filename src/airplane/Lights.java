@@ -16,14 +16,33 @@ public class Lights {
 
     private LightsEnum color = LightsEnum.ETEINT;
 
+    /**
+     *
+     * @return
+     */
     public LightsEnum getColor() {
         return color;
     }
 
+    /**
+     *
+     * @param newCol
+     */
     public void setColor(LightsEnum newCol) {
         color = newCol;
     }
 
+    /**
+     *
+     * @param manette
+     * @param roue1
+     * @param roue2
+     * @param roue3
+     * @param porte1
+     * @param porte2
+     * @param porte3
+     * @return
+     */
     public LightsEnum animLights(Handle manette, Wheels roue1, Wheels roue2, Wheels roue3, Doors porte1, Doors porte2, Doors porte3) {
         //ETEINT (la manette est en position haute, les portes sont fermées, et les roues rentrées
         if (manette.getPosition() == HandleEnum.HAUT && roue1.getEtat() == WheelsEnum.RENTRE && roue2.getEtat() == WheelsEnum.RENTRE && roue3.getEtat() == WheelsEnum.RENTRE && porte1.getPosition() == DoorsEnum.FERME && porte2.getPosition() == DoorsEnum.FERME && porte3.getPosition() == DoorsEnum.FERME) {

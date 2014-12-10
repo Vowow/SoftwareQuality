@@ -13,6 +13,13 @@ package airplane;
 /** Define two states for Doors: OPEN and CLOSE*/
 public enum DoorsEnum {
 
+    /**
+     *
+     */
     OUVERT,
+
+    /**
+     *
+     */
     FERME,
 }

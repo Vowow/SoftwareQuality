@@ -16,14 +16,28 @@ public class Wheels {
 
     private WheelsEnum etat = WheelsEnum.RENTRE;
 
+    /**
+     *
+     * @return
+     */
     public WheelsEnum getEtat() {
         return etat;
     }
 
+    /**
+     *
+     * @param etat
+     */
     public void setEtat(WheelsEnum etat) {
         this.etat = etat;
     }
 
+    /**
+     *
+     * @param porte
+     * @param manette
+     * @return
+     */
     public WheelsEnum mouvRoue(Doors porte, Handle manette) {
         //phase atterissage - mise en mouvement
         if (porte.getPosition() == DoorsEnum.OUVERT && this.etat == WheelsEnum.RENTRE && manette.getPosition() == HandleEnum.BAS) {

@@ -10,8 +10,10 @@ import airplane.Handle;
 import airplane.HandleEnum;
 import airplane.Lights;
 import airplane.LightsEnum;
+import airplane.View;
 import airplane.Wheels;
 import airplane.WheelsEnum;
+import airplane.Software;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Assert;
@@ -24,7 +26,8 @@ import org.junit.Test;
 * @author Sacha MASSON
  */
 public class TestAP {
-
+    Software soft = new Software();
+    View vue = new View();
     Handle manette = new Handle();
     Doors porte1 = new Doors();
     Doors porte2 = new Doors();
@@ -168,6 +171,25 @@ public class TestAP {
         roue3.setEtat(WheelsEnum.SORTI);
         Assert.assertEquals(LightsEnum.ROUGE, voyant.animLights(manette, roue1, roue2, roue3, porte1, porte2, porte3));
     }
+    /**************************
+     * Test Software          *
+     **************************/
+    @Test
+    public void testLanding() {
+        porte1.setDoorsPosition(DoorsEnum.FERME);
+        manette.setPosition(HandleEnum.BAS);
+        roue1.setEtat(WheelsEnum.MOUVEMENT);
 
+        Assert.assertEquals(true, soft.doSoft(manette,vue));
+    }
+        @Test
+    public void testTakeOff() {
+        porte1.setDoorsPosition(DoorsEnum.FERME);
+        manette.setPosition(HandleEnum.BAS);
+        roue1.setEtat(WheelsEnum.MOUVEMENT);
+        soft.doSoft(manette,vue);
+        manette.setPosition(HandleEnum.HAUT);
 
+        Assert.assertEquals(true, soft.doSoft(manette,vue));
+    }
 }

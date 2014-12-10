@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Lights.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;AirPlane&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">airplane</a> &gt; <span class="el_source">Lights.java</span></div><h1>Lights.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package airplane;
+
+/**
+ *
+ * @author Martin LEGRIS
+ * @author Sacha MASSON
+ */
+
+/** Lights Manager: keep position of the lights and managing animation */
+<span class="fc" id="L15">public class Lights {</span>
+
+<span class="fc" id="L17">    private LightsEnum color = LightsEnum.ETEINT;</span>
+
+    public LightsEnum getColor() {
+<span class="nc" id="L20">        return color;</span>
+    }
+
+    public void setColor(LightsEnum newCol) {
+<span class="nc" id="L24">        color = newCol;</span>
+<span class="nc" id="L25">    }</span>
+
+    public LightsEnum animLights(Handle manette, Wheels roue1, Wheels roue2, Wheels roue3, Doors porte1, Doors porte2, Doors porte3) {
+        //ETEINT (la manette est en position haute, les portes sont fermées, et les roues rentrées
+<span class="pc bpc" id="L29" title="5 of 14 branches missed.">        if (manette.getPosition() == HandleEnum.HAUT &amp;&amp; roue1.getEtat() == WheelsEnum.RENTRE &amp;&amp; roue2.getEtat() == WheelsEnum.RENTRE &amp;&amp; roue3.getEtat() == WheelsEnum.RENTRE &amp;&amp; porte1.getPosition() == DoorsEnum.FERME &amp;&amp; porte2.getPosition() == DoorsEnum.FERME &amp;&amp; porte3.getPosition() == DoorsEnum.FERME) {</span>
+<span class="fc" id="L30">            color = LightsEnum.ETEINT;</span>
+<span class="fc" id="L31">            return color;</span>
+        } // ORANGE (une roue est en mouvement et une porte est ouverte        
+<span class="pc bpc" id="L33" title="2 of 6 branches missed.">        else if (porte1.getPosition() == DoorsEnum.OUVERT || porte2.getPosition() == DoorsEnum.OUVERT || porte3.getPosition() == DoorsEnum.OUVERT) {</span>
+<span class="pc bpc" id="L34" title="2 of 6 branches missed.">            if(roue1.getEtat() == WheelsEnum.MOUVEMENT || roue2.getEtat() == WheelsEnum.MOUVEMENT || roue3.getEtat()==WheelsEnum.MOUVEMENT){</span>
+<span class="fc" id="L35">                color = LightsEnum.ORANGE;</span>
+<span class="fc" id="L36">            return color;</span>
+            }
+            
+            
+        } //VERT (la manette est en position basse, les roues sont sorties et les portes sont fermées
+<span class="pc bpc" id="L41" title="5 of 14 branches missed.">        if (manette.getPosition() == HandleEnum.BAS &amp;&amp; roue1.getEtat() == WheelsEnum.SORTI &amp;&amp; roue2.getEtat() == WheelsEnum.SORTI &amp;&amp; roue3.getEtat() == WheelsEnum.SORTI &amp;&amp; porte1.getPosition() == DoorsEnum.FERME &amp;&amp; porte2.getPosition() == DoorsEnum.FERME &amp;&amp; porte3.getPosition() == DoorsEnum.FERME) {</span>
+<span class="fc" id="L42">            color = LightsEnum.VERT;</span>
+<span class="fc" id="L43">            return color;</span>
+        } //ERREUR ROUGE
+        else {
+<span class="fc" id="L46">            return LightsEnum.ROUGE;</span>
+        }
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.2.201409121644</span></div></body></html>

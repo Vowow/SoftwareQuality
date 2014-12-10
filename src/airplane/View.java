@@ -5,26 +5,28 @@
  */
 package airplane;
 
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JTextArea;
-
 
 /**
  *
  * @author Martin LEGRIS
  * @author Sacha MASSON
  */
-
-/** Generates the Swing View */
+/**
+ * Generates the Swing View
+ */
 public final class View extends javax.swing.JFrame implements ActionListener {
 
     private Handle manette = new Handle();
     private Software soft = new Software();
     private JTextArea textArea;
 
-    View() {
+    /**
+     *
+     */
+    public View() {
         initComponents();
         jRadioButton1.setEnabled(false);
         jRadioButton2.setEnabled(false);
@@ -32,16 +34,26 @@ public final class View extends javax.swing.JFrame implements ActionListener {
         jRadioButton4.setEnabled(false);
         jButton1.setEnabled(false);
         jButton2.setEnabled(true);
+        
         //on initialise les voyants à éteint
         moveLights(LightsEnum.ETEINT);
     }
 
+    /**
+     *
+     * @param s
+     */
     public void log(String s) {
         textArea.append(s);
     }
 
     //Gestion des voyants
-    public void moveLights(LightsEnum couleur) {
+
+    /**
+     *
+     * @param couleur
+     */
+        public void moveLights(LightsEnum couleur) {
         if (couleur == LightsEnum.ORANGE) {
             jRadioButton1.setSelected(false);
             jRadioButton2.setSelected(true);
@@ -71,8 +83,6 @@ public final class View extends javax.swing.JFrame implements ActionListener {
         }
     }
 
-
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -82,6 +92,8 @@ public final class View extends javax.swing.JFrame implements ActionListener {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
+        javax.swing.JLabel jLabel1;
+        javax.swing.JLabel jLabel2;
         textArea = new JTextArea(10, 20);
         textArea.setEditable(false);
         textArea.setLineWrap(true);
@@ -108,25 +120,9 @@ public final class View extends javax.swing.JFrame implements ActionListener {
         jButton2.setText("Down");
 
         jRadioButton1.setText("Rouge - Panne");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
-            @Override
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
-            }
-        });
-
         jRadioButton2.setText("Orange - En mouvement");
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
-            @Override
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
-            }
-        });
-
         jRadioButton3.setText("Vert - Train d'atterissage sorti");
-
         jRadioButton4.setText("Eteint - Train rentré");
-
         jLabel1.setText("Manette");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -179,20 +175,9 @@ public final class View extends javax.swing.JFrame implements ActionListener {
         pack();
     }// </editor-fold>                        
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-
-    }
-
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-    }
-
     // Variables declaration - do not modify                     
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;

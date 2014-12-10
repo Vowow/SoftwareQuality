@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Doors.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;AirPlane&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">airplane</a> &gt; <span class="el_source">Doors.java</span></div><h1>Doors.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package airplane;
+
+/**
+ *
+ * @author Martin LEGRIS
+ * @author Sacha MASSON
+ */
+
+/** Door Manager: keep position of the door and managing movements */
+public class Doors {
+
+    private DoorsEnum position;
+
+<span class="fc" id="L19">    public Doors() {</span>
+<span class="fc" id="L20">        this.position = DoorsEnum.FERME;</span>
+<span class="fc" id="L21">    }</span>
+
+    public DoorsEnum getPosition() {
+<span class="fc" id="L24">        return position;</span>
+    }
+
+    public void setDoorsPosition(DoorsEnum newDoorsPosition) {
+<span class="nc" id="L28">        position = newDoorsPosition;</span>
+
+<span class="nc" id="L30">    }</span>
+
+    public DoorsEnum mouvPorte(Handle manette, Wheels roue) {
+
+<span class="pc bpc" id="L34" title="1 of 2 branches missed.">        if (roue.getEtat() == WheelsEnum.MOUVEMENT) {</span>
+<span class="nc" id="L35">            return null;</span>
+        } //Prépartion de l'atterrissage
+<span class="pc bpc" id="L37" title="1 of 6 branches missed.">        else if (manette.getPosition() == HandleEnum.BAS &amp;&amp; this.position == DoorsEnum.FERME &amp;&amp; roue.getEtat() == WheelsEnum.RENTRE) {</span>
+<span class="fc" id="L38">            position = DoorsEnum.OUVERT;</span>
+<span class="fc" id="L39">            return position;</span>
+        } //Phase décollage
+<span class="pc bpc" id="L41" title="1 of 6 branches missed.">        else if (manette.getPosition() == HandleEnum.HAUT &amp;&amp; this.position == DoorsEnum.FERME &amp;&amp; roue.getEtat() == WheelsEnum.SORTI) {</span>
+<span class="fc" id="L42">            position = DoorsEnum.OUVERT;</span>
+<span class="fc" id="L43">            return position;</span>
+<span class="pc bpc" id="L44" title="3 of 6 branches missed.">        } else if (manette.getPosition() == HandleEnum.BAS &amp;&amp; this.position == DoorsEnum.FERME &amp;&amp; roue.getEtat() == WheelsEnum.SORTI) {</span>
+<span class="nc" id="L45">            return position;</span>
+<span class="pc bpc" id="L46" title="3 of 6 branches missed.">        } else if (manette.getPosition() == HandleEnum.HAUT &amp;&amp; this.position == DoorsEnum.FERME &amp;&amp; roue.getEtat() == WheelsEnum.RENTRE) {</span>
+<span class="nc" id="L47">            return position;</span>
+        } //fin d'action
+<span class="pc bpc" id="L49" title="1 of 4 branches missed.">        else if (roue.getEtat() == WheelsEnum.SORTI || roue.getEtat() == WheelsEnum.RENTRE) {</span>
+<span class="fc" id="L50">            position = DoorsEnum.FERME;</span>
+<span class="fc" id="L51">            return position;</span>
+        }
+
+<span class="nc" id="L54">        return null;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.2.201409121644</span></div></body></html>

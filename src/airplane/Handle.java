@@ -16,10 +16,18 @@ public class Handle {
     //false => handle up; true = > handle down
     private HandleEnum position = HandleEnum.HAUT; 
 
+    /**
+     *
+     * @return
+     */
     public HandleEnum getPosition() {
         return position;
     }
 
+    /**
+     *
+     * @param position
+     */
     public void setPosition(HandleEnum position) {
         this.position = position;
     }

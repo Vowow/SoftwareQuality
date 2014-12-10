@@ -16,19 +16,36 @@ public class Doors {
 
     private DoorsEnum position;
 
+    /**
+     *
+     */
     public Doors() {
         this.position = DoorsEnum.FERME;
     }
 
+    /**
+     *
+     * @return
+     */
     public DoorsEnum getPosition() {
         return position;
     }
 
+    /**
+     *
+     * @param newDoorsPosition
+     */
     public void setDoorsPosition(DoorsEnum newDoorsPosition) {
         position = newDoorsPosition;
 
     }
 
+    /**
+     *
+     * @param manette
+     * @param roue
+     * @return
+     */
     public DoorsEnum mouvPorte(Handle manette, Wheels roue) {
 
         if (roue.getEtat() == WheelsEnum.MOUVEMENT) {

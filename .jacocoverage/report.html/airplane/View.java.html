@@ -68,11 +68,11 @@ public final class View extends javax.swing.JFrame implements ActionListener {
 <span class="fc" id="L68">            jRadioButton4.setSelected(false);</span>
         }
 
-<span class="fc bfc" id="L71" title="All 2 branches covered.">        if (couleur == LightsEnum.VERT) {</span>
-<span class="fc" id="L72">            jRadioButton1.setSelected(false);</span>
-<span class="fc" id="L73">            jRadioButton2.setSelected(false);</span>
-<span class="fc" id="L74">            jRadioButton3.setSelected(true);</span>
-<span class="fc" id="L75">            jRadioButton4.setSelected(false);</span>
+<span class="pc bpc" id="L71" title="1 of 2 branches missed.">        if (couleur == LightsEnum.VERT) {</span>
+<span class="nc" id="L72">            jRadioButton1.setSelected(false);</span>
+<span class="nc" id="L73">            jRadioButton2.setSelected(false);</span>
+<span class="nc" id="L74">            jRadioButton3.setSelected(true);</span>
+<span class="nc" id="L75">            jRadioButton4.setSelected(false);</span>
         }
 
 <span class="fc bfc" id="L78" title="All 2 branches covered.">        if (couleur == LightsEnum.ETEINT) {</span>
@@ -189,22 +189,22 @@ public final class View extends javax.swing.JFrame implements ActionListener {
 <span class="fc" id="L189">        Object source = e.getSource();</span>
 
         //Handle UP
-<span class="fc bfc" id="L192" title="All 2 branches covered.">        if (source.equals(jButton2)) {</span>
-<span class="fc" id="L193">            manette.setPosition(HandleEnum.BAS);</span>
-<span class="fc" id="L194">            textArea.append(&quot;Début de la séquence d'atterissage\n&quot;);</span>
+<span class="pc bpc" id="L192" title="1 of 2 branches missed.">        if (source.equals(jButton2)) {</span>
+<span class="nc" id="L193">            manette.setPosition(HandleEnum.BAS);</span>
+<span class="nc" id="L194">            textArea.append(&quot;Début de la séquence d'atterissage\n&quot;);</span>
             //Simulation de la manette : quand elle est en position basse on ne peut plus appuyer sur down et inversement
-<span class="fc" id="L196">            jButton2.setEnabled(false);</span>
-<span class="fc" id="L197">            jButton1.setEnabled(true);</span>
-<span class="fc" id="L198">            soft.doSoft(manette, this);</span>
+<span class="nc" id="L196">            jButton2.setEnabled(false);</span>
+<span class="nc" id="L197">            jButton1.setEnabled(true);</span>
+<span class="nc" id="L198">            soft.doSoft(manette, this);</span>
 
             //Handle Down
 <span class="pc bpc" id="L201" title="1 of 2 branches missed.">        } else if (source.equals(jButton1)) {</span>
-<span class="fc" id="L202">            manette.setPosition(HandleEnum.HAUT);</span>
-<span class="fc" id="L203">            textArea.append(&quot;Début de la séquence de décollage\n&quot;);</span>
+<span class="nc" id="L202">            manette.setPosition(HandleEnum.HAUT);</span>
+<span class="nc" id="L203">            textArea.append(&quot;Début de la séquence de décollage\n&quot;);</span>
             //Simulation de la manette : quand elle est en position basse on ne peut plus appuyer sur down et inversement
-<span class="fc" id="L205">            jButton1.setEnabled(false);</span>
-<span class="fc" id="L206">            jButton2.setEnabled(true);</span>
-<span class="fc" id="L207">            soft.doSoft(manette, this);</span>
+<span class="nc" id="L205">            jButton1.setEnabled(false);</span>
+<span class="nc" id="L206">            jButton2.setEnabled(true);</span>
+<span class="nc" id="L207">            soft.doSoft(manette, this);</span>
 
         }
 <span class="fc" id="L210">    }</span>

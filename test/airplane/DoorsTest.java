@@ -76,4 +76,45 @@ public class DoorsTest {
         assertEquals(expResult, result);
     }
     
+    @Test
+    public void testMouvPorte2() {
+        System.out.println("mouvPorte");
+        Handle manette = new Handle();
+        manette.setPosition(HandleEnum.BAS);
+        Wheels roue = new Wheels();
+        roue.setEtat(WheelsEnum.SORTI);
+        Doors instance = new Doors();
+        instance.setDoorsPosition(DoorsEnum.OUVERT);
+        DoorsEnum expResult = DoorsEnum.FERME;
+        DoorsEnum result = instance.mouvPorte(manette, roue);
+        assertEquals(expResult, result);
+    }
+    @Test
+    public void testMouvPorte3() {
+        System.out.println("mouvPorte");
+        Handle manette = new Handle();
+        manette.setPosition(HandleEnum.BAS);
+        Wheels roue = new Wheels();
+        roue.setEtat(WheelsEnum.SORTI);
+        Doors instance = new Doors();
+        instance.setDoorsPosition(DoorsEnum.FERME);
+        DoorsEnum expResult = DoorsEnum.FERME;
+        DoorsEnum result = instance.mouvPorte(manette, roue);
+        assertEquals(expResult, result);
+    }
+    
+    @Test
+    public void testMouvPorte4() {
+        System.out.println("mouvPorte");
+        Handle manette = new Handle();
+        manette.setPosition(HandleEnum.HAUT);
+        Wheels roue = new Wheels();
+        roue.setEtat(WheelsEnum.RENTRE);
+        Doors instance = new Doors();
+        instance.setDoorsPosition(DoorsEnum.FERME);
+        DoorsEnum expResult = DoorsEnum.FERME;
+        DoorsEnum result = instance.mouvPorte(manette, roue);
+        assertEquals(expResult, result);
+    }
+    
 }

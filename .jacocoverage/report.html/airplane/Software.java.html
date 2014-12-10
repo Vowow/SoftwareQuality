@@ -53,31 +53,31 @@ import javax.swing.Timer;
                 @Override
                 public void actionPerformed(ActionEvent arg0) {
                     //on sorte ou on rentre les roues
-<span class="fc" id="L56">                    roue1.mouvRoue(porte1, manette);</span>
-<span class="fc" id="L57">                    roue2.mouvRoue(porte2, manette);</span>
-<span class="fc" id="L58">                    roue3.mouvRoue(porte3, manette);</span>
+<span class="nc" id="L56">                    roue1.mouvRoue(porte1, manette);</span>
+<span class="nc" id="L57">                    roue2.mouvRoue(porte2, manette);</span>
+<span class="nc" id="L58">                    roue3.mouvRoue(porte3, manette);</span>
                     //console log
-<span class="pc bpc" id="L60" title="5 of 6 branches missed.">                    if (roue1.getEtat() == WheelsEnum.RENTRE &amp;&amp; roue2.getEtat() == WheelsEnum.RENTRE &amp;&amp; roue3.getEtat() == WheelsEnum.RENTRE) {</span>
+<span class="nc bnc" id="L60" title="All 6 branches missed.">                    if (roue1.getEtat() == WheelsEnum.RENTRE &amp;&amp; roue2.getEtat() == WheelsEnum.RENTRE &amp;&amp; roue3.getEtat() == WheelsEnum.RENTRE) {</span>
 <span class="nc" id="L61">                        vue.log(&quot;Roues Rentrées \n&quot;);</span>
                     }
-<span class="pc bpc" id="L63" title="3 of 6 branches missed.">                    if (roue1.getEtat() == WheelsEnum.SORTI &amp;&amp; roue2.getEtat() == WheelsEnum.SORTI &amp;&amp; roue3.getEtat() == WheelsEnum.SORTI) {</span>
-<span class="fc" id="L64">                        vue.log(&quot;Roues Sorties \n&quot;);</span>
+<span class="nc bnc" id="L63" title="All 6 branches missed.">                    if (roue1.getEtat() == WheelsEnum.SORTI &amp;&amp; roue2.getEtat() == WheelsEnum.SORTI &amp;&amp; roue3.getEtat() == WheelsEnum.SORTI) {</span>
+<span class="nc" id="L64">                        vue.log(&quot;Roues Sorties \n&quot;);</span>
                     }
                     //on fermes les portes
-<span class="fc" id="L67">                    porte1.mouvPorte(manette, roue1);</span>
-<span class="fc" id="L68">                    porte2.mouvPorte(manette, roue2);</span>
-<span class="fc" id="L69">                    porte3.mouvPorte(manette, roue3);</span>
-<span class="fc" id="L70">                    vue.log(&quot;Porte fermées \n&quot;);</span>
+<span class="nc" id="L67">                    porte1.mouvPorte(manette, roue1);</span>
+<span class="nc" id="L68">                    porte2.mouvPorte(manette, roue2);</span>
+<span class="nc" id="L69">                    porte3.mouvPorte(manette, roue3);</span>
+<span class="nc" id="L70">                    vue.log(&quot;Porte fermées \n&quot;);</span>
                     //console log
-<span class="pc bpc" id="L72" title="5 of 6 branches missed.">                    if (roue1.getEtat() == WheelsEnum.RENTRE &amp;&amp; roue2.getEtat() == WheelsEnum.RENTRE &amp;&amp; roue3.getEtat() == WheelsEnum.RENTRE) {</span>
+<span class="nc bnc" id="L72" title="All 6 branches missed.">                    if (roue1.getEtat() == WheelsEnum.RENTRE &amp;&amp; roue2.getEtat() == WheelsEnum.RENTRE &amp;&amp; roue3.getEtat() == WheelsEnum.RENTRE) {</span>
 <span class="nc" id="L73">                        vue.moveLights(voyant.animLights(manette, roue1, roue2, roue3, porte1, porte2, porte3));</span>
 <span class="nc" id="L74">                        vue.log(&quot;\nROUES RENTREES \n&quot;);</span>
                     }
-<span class="pc bpc" id="L76" title="3 of 6 branches missed.">                    if (roue1.getEtat() == WheelsEnum.SORTI &amp;&amp; roue2.getEtat() == WheelsEnum.SORTI &amp;&amp; roue3.getEtat() == WheelsEnum.SORTI) {</span>
-<span class="fc" id="L77">                        vue.moveLights(voyant.animLights(manette, roue1, roue2, roue3, porte1, porte2, porte3));</span>
-<span class="fc" id="L78">                        vue.log(&quot;\nROUES SORTIES \n&quot;);</span>
+<span class="nc bnc" id="L76" title="All 6 branches missed.">                    if (roue1.getEtat() == WheelsEnum.SORTI &amp;&amp; roue2.getEtat() == WheelsEnum.SORTI &amp;&amp; roue3.getEtat() == WheelsEnum.SORTI) {</span>
+<span class="nc" id="L77">                        vue.moveLights(voyant.animLights(manette, roue1, roue2, roue3, porte1, porte2, porte3));</span>
+<span class="nc" id="L78">                        vue.log(&quot;\nROUES SORTIES \n&quot;);</span>
                     }
-<span class="fc" id="L80">                }</span>
+<span class="nc" id="L80">                }</span>
             });
 <span class="fc" id="L82">            timer.setRepeats(false);</span>
 <span class="fc" id="L83">            timer.start();</span>

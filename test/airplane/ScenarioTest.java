@@ -12,7 +12,7 @@ import airplane.Handle;
 import airplane.HandleEnum;
 import airplane.Lights;
 import airplane.LightsEnum;
-//import airplane.View;
+import airplane.View;
 import airplane.Wheels;
 import airplane.WheelsEnum;
 import airplane.Software;
@@ -29,7 +29,7 @@ import org.junit.Test;
  */
 public class ScenarioTest {
     Software soft = new Software();
-    //View vue = new View();
+    View vue = new View();
     Handle manette = new Handle();
     Doors porte1 = new Doors();
     Doors porte2 = new Doors();
@@ -147,36 +147,12 @@ public class ScenarioTest {
 
     }
     
-    /**************************
-     * Test des voyants       *
-     **************************/
-    @Test
-    public void testLight1() {
-        porte1.setDoorsPosition(DoorsEnum.FERME);
-        porte2.setDoorsPosition(DoorsEnum.FERME);
-        porte3.setDoorsPosition(DoorsEnum.FERME);
-        manette.setPosition(HandleEnum.BAS);
-        roue1.setEtat(WheelsEnum.SORTI);
-        roue2.setEtat(WheelsEnum.SORTI);
-        roue3.setEtat(WheelsEnum.SORTI);
-        Assert.assertEquals(LightsEnum.VERT, voyant.animLights(manette, roue1, roue2, roue3, porte1, porte2, porte3));
-    }
     
-    @Test
-    public void testLight2() {
-        porte1.setDoorsPosition(DoorsEnum.FERME);
-        porte2.setDoorsPosition(DoorsEnum.FERME);
-        porte3.setDoorsPosition(DoorsEnum.FERME);
-        manette.setPosition(HandleEnum.BAS);
-        roue1.setEtat(WheelsEnum.MOUVEMENT);
-        roue2.setEtat(WheelsEnum.SORTI);
-        roue3.setEtat(WheelsEnum.SORTI);
-        Assert.assertEquals(LightsEnum.ROUGE, voyant.animLights(manette, roue1, roue2, roue3, porte1, porte2, porte3));
-    }
+
     /**************************
      * Test Software          *
      **************************/
-    /*
+    
     @Test
     public void testLanding() {
         porte1.setDoorsPosition(DoorsEnum.FERME);
@@ -194,5 +170,5 @@ public class ScenarioTest {
         manette.setPosition(HandleEnum.HAUT);
 
         Assert.assertEquals(true, soft.doSoft(manette,vue));
-    }*/
+    }
 }

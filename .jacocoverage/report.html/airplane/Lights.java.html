@@ -21,7 +21,7 @@ package airplane;
      * @return
      */
     public LightsEnum getColor() {
-<span class="nc" id="L24">        return color;</span>
+<span class="fc" id="L24">        return color;</span>
     }
 
     /**
@@ -29,8 +29,8 @@ package airplane;
      * @param newCol
      */
     public void setColor(LightsEnum newCol) {
-<span class="nc" id="L32">        color = newCol;</span>
-<span class="nc" id="L33">    }</span>
+<span class="fc" id="L32">        color = newCol;</span>
+<span class="fc" id="L33">    }</span>
 
     /**
      *
@@ -45,9 +45,9 @@ package airplane;
      */
     public LightsEnum animLights(Handle manette, Wheels roue1, Wheels roue2, Wheels roue3, Doors porte1, Doors porte2, Doors porte3) {
         //ETEINT (la manette est en position haute, les portes sont fermées, et les roues rentrées
-<span class="pc bpc" id="L48" title="11 of 14 branches missed.">        if (manette.getPosition() == HandleEnum.HAUT &amp;&amp; roue1.getEtat() == WheelsEnum.RENTRE &amp;&amp; roue2.getEtat() == WheelsEnum.RENTRE &amp;&amp; roue3.getEtat() == WheelsEnum.RENTRE &amp;&amp; porte1.getPosition() == DoorsEnum.FERME &amp;&amp; porte2.getPosition() == DoorsEnum.FERME &amp;&amp; porte3.getPosition() == DoorsEnum.FERME) {</span>
-<span class="nc" id="L49">            color = LightsEnum.ETEINT;</span>
-<span class="nc" id="L50">            return color;</span>
+<span class="pc bpc" id="L48" title="4 of 14 branches missed.">        if (manette.getPosition() == HandleEnum.HAUT &amp;&amp; roue1.getEtat() == WheelsEnum.RENTRE &amp;&amp; roue2.getEtat() == WheelsEnum.RENTRE &amp;&amp; roue3.getEtat() == WheelsEnum.RENTRE &amp;&amp; porte1.getPosition() == DoorsEnum.FERME &amp;&amp; porte2.getPosition() == DoorsEnum.FERME &amp;&amp; porte3.getPosition() == DoorsEnum.FERME) {</span>
+<span class="fc" id="L49">            color = LightsEnum.ETEINT;</span>
+<span class="fc" id="L50">            return color;</span>
         } // ORANGE (une roue est en mouvement et une porte est ouverte        
 <span class="pc bpc" id="L52" title="2 of 6 branches missed.">        else if (porte1.getPosition() == DoorsEnum.OUVERT || porte2.getPosition() == DoorsEnum.OUVERT || porte3.getPosition() == DoorsEnum.OUVERT) {</span>
 <span class="pc bpc" id="L53" title="2 of 6 branches missed.">            if(roue1.getEtat() == WheelsEnum.MOUVEMENT || roue2.getEtat() == WheelsEnum.MOUVEMENT || roue3.getEtat()==WheelsEnum.MOUVEMENT){</span>

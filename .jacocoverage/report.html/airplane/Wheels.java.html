@@ -29,8 +29,8 @@ package airplane;
      * @param etat
      */
     public void setEtat(WheelsEnum etat) {
-<span class="nc" id="L32">        this.etat = etat;</span>
-<span class="nc" id="L33">    }</span>
+<span class="fc" id="L32">        this.etat = etat;</span>
+<span class="fc" id="L33">    }</span>
 
     /**
      *
@@ -40,23 +40,23 @@ package airplane;
      */
     public WheelsEnum mouvRoue(Doors porte, Handle manette) {
         //phase atterissage - mise en mouvement
-<span class="pc bpc" id="L43" title="2 of 6 branches missed.">        if (porte.getPosition() == DoorsEnum.OUVERT &amp;&amp; this.etat == WheelsEnum.RENTRE &amp;&amp; manette.getPosition() == HandleEnum.BAS) {</span>
+<span class="pc bpc" id="L43" title="1 of 6 branches missed.">        if (porte.getPosition() == DoorsEnum.OUVERT &amp;&amp; this.etat == WheelsEnum.RENTRE &amp;&amp; manette.getPosition() == HandleEnum.BAS) {</span>
 <span class="fc" id="L44">            etat = WheelsEnum.MOUVEMENT;</span>
 <span class="fc" id="L45">            return etat;</span>
         } //phase atterissage - fin de phase
-<span class="pc bpc" id="L47" title="2 of 6 branches missed.">        else if (porte.getPosition() == DoorsEnum.OUVERT &amp;&amp; this.etat == WheelsEnum.MOUVEMENT &amp;&amp; manette.getPosition() == HandleEnum.BAS) {</span>
+<span class="fc bfc" id="L47" title="All 6 branches covered.">        else if (porte.getPosition() == DoorsEnum.OUVERT &amp;&amp; this.etat == WheelsEnum.MOUVEMENT &amp;&amp; manette.getPosition() == HandleEnum.BAS) {</span>
 <span class="fc" id="L48">            etat = WheelsEnum.SORTI;</span>
 <span class="fc" id="L49">            return etat;</span>
         } ///Phase de décollage - mise en mouvement
-<span class="pc bpc" id="L51" title="3 of 6 branches missed.">        else if (porte.getPosition() == DoorsEnum.OUVERT &amp;&amp; this.etat == WheelsEnum.SORTI &amp;&amp; manette.getPosition() == HandleEnum.HAUT) {</span>
+<span class="pc bpc" id="L51" title="1 of 6 branches missed.">        else if (porte.getPosition() == DoorsEnum.OUVERT &amp;&amp; this.etat == WheelsEnum.SORTI &amp;&amp; manette.getPosition() == HandleEnum.HAUT) {</span>
 <span class="fc" id="L52">            etat = WheelsEnum.MOUVEMENT;</span>
 <span class="fc" id="L53">            return etat;</span>
         } ///Phase de décollage - fin de phase
-<span class="nc bnc" id="L55" title="All 6 branches missed.">        else if (porte.getPosition() == DoorsEnum.OUVERT &amp;&amp; this.etat == WheelsEnum.MOUVEMENT &amp;&amp; manette.getPosition() == HandleEnum.HAUT) {</span>
-<span class="nc" id="L56">            etat = WheelsEnum.RENTRE;</span>
-<span class="nc" id="L57">            return etat;</span>
+<span class="pc bpc" id="L55" title="2 of 6 branches missed.">        else if (porte.getPosition() == DoorsEnum.OUVERT &amp;&amp; this.etat == WheelsEnum.MOUVEMENT &amp;&amp; manette.getPosition() == HandleEnum.HAUT) {</span>
+<span class="fc" id="L56">            etat = WheelsEnum.RENTRE;</span>
+<span class="fc" id="L57">            return etat;</span>
         } else {
-<span class="nc" id="L59">            return null;</span>
+<span class="fc" id="L59">            return null;</span>
         }
     }
 }

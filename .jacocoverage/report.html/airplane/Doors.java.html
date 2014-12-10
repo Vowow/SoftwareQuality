@@ -36,9 +36,9 @@ public class Doors {
      * @param newDoorsPosition
      */
     public void setDoorsPosition(DoorsEnum newDoorsPosition) {
-<span class="nc" id="L39">        position = newDoorsPosition;</span>
+<span class="fc" id="L39">        position = newDoorsPosition;</span>
 
-<span class="nc" id="L41">    }</span>
+<span class="fc" id="L41">    }</span>
 
     /**
      *
@@ -48,20 +48,20 @@ public class Doors {
      */
     public DoorsEnum mouvPorte(Handle manette, Wheels roue) {
 
-<span class="pc bpc" id="L51" title="1 of 2 branches missed.">        if (roue.getEtat() == WheelsEnum.MOUVEMENT) {</span>
-<span class="nc" id="L52">            return null;</span>
+<span class="fc bfc" id="L51" title="All 2 branches covered.">        if (roue.getEtat() == WheelsEnum.MOUVEMENT) {</span>
+<span class="fc" id="L52">            return null;</span>
         } //Prépartion de l'atterrissage
-<span class="pc bpc" id="L54" title="1 of 6 branches missed.">        else if (manette.getPosition() == HandleEnum.BAS &amp;&amp; this.position == DoorsEnum.FERME &amp;&amp; roue.getEtat() == WheelsEnum.RENTRE) {</span>
+<span class="fc bfc" id="L54" title="All 6 branches covered.">        else if (manette.getPosition() == HandleEnum.BAS &amp;&amp; this.position == DoorsEnum.FERME &amp;&amp; roue.getEtat() == WheelsEnum.RENTRE) {</span>
 <span class="fc" id="L55">            position = DoorsEnum.OUVERT;</span>
 <span class="fc" id="L56">            return position;</span>
         } //Phase décollage
-<span class="pc bpc" id="L58" title="2 of 6 branches missed.">        else if (manette.getPosition() == HandleEnum.HAUT &amp;&amp; this.position == DoorsEnum.FERME &amp;&amp; roue.getEtat() == WheelsEnum.SORTI) {</span>
+<span class="pc bpc" id="L58" title="1 of 6 branches missed.">        else if (manette.getPosition() == HandleEnum.HAUT &amp;&amp; this.position == DoorsEnum.FERME &amp;&amp; roue.getEtat() == WheelsEnum.SORTI) {</span>
 <span class="fc" id="L59">            position = DoorsEnum.OUVERT;</span>
 <span class="fc" id="L60">            return position;</span>
-<span class="pc bpc" id="L61" title="4 of 6 branches missed.">        } else if (manette.getPosition() == HandleEnum.BAS &amp;&amp; this.position == DoorsEnum.FERME &amp;&amp; roue.getEtat() == WheelsEnum.SORTI) {</span>
-<span class="nc" id="L62">            return position;</span>
-<span class="pc bpc" id="L63" title="5 of 6 branches missed.">        } else if (manette.getPosition() == HandleEnum.HAUT &amp;&amp; this.position == DoorsEnum.FERME &amp;&amp; roue.getEtat() == WheelsEnum.RENTRE) {</span>
-<span class="nc" id="L64">            return position;</span>
+<span class="pc bpc" id="L61" title="1 of 6 branches missed.">        } else if (manette.getPosition() == HandleEnum.BAS &amp;&amp; this.position == DoorsEnum.FERME &amp;&amp; roue.getEtat() == WheelsEnum.SORTI) {</span>
+<span class="fc" id="L62">            return position;</span>
+<span class="pc bpc" id="L63" title="2 of 6 branches missed.">        } else if (manette.getPosition() == HandleEnum.HAUT &amp;&amp; this.position == DoorsEnum.FERME &amp;&amp; roue.getEtat() == WheelsEnum.RENTRE) {</span>
+<span class="fc" id="L64">            return position;</span>
         } //fin d'action
 <span class="pc bpc" id="L66" title="3 of 4 branches missed.">        else if (roue.getEtat() == WheelsEnum.SORTI || roue.getEtat() == WheelsEnum.RENTRE) {</span>
 <span class="fc" id="L67">            position = DoorsEnum.FERME;</span>

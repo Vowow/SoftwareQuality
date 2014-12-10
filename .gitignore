@@ -2,6 +2,8 @@
 
 ### Java ###
 *.class
+/test/airplane/ViewTest.java
+/test/airplane/ScenarioViewTest.java
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/

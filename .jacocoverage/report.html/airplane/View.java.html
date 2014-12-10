@@ -23,53 +23,65 @@ public final class View extends javax.swing.JFrame implements ActionListener {
 <span class="fc" id="L23">    private Software soft = new Software();</span>
     private JTextArea textArea;
 
-<span class="fc" id="L26">    public View() {</span>
-<span class="fc" id="L27">        initComponents();</span>
-<span class="fc" id="L28">        jRadioButton1.setEnabled(false);</span>
-<span class="fc" id="L29">        jRadioButton2.setEnabled(false);</span>
-<span class="fc" id="L30">        jRadioButton3.setEnabled(false);</span>
-<span class="fc" id="L31">        jRadioButton4.setEnabled(false);</span>
-<span class="fc" id="L32">        jButton1.setEnabled(false);</span>
-<span class="fc" id="L33">        jButton2.setEnabled(true);</span>
+    /**
+     *
+     */
+<span class="fc" id="L29">    public View() {</span>
+<span class="fc" id="L30">        initComponents();</span>
+<span class="fc" id="L31">        jRadioButton1.setEnabled(false);</span>
+<span class="fc" id="L32">        jRadioButton2.setEnabled(false);</span>
+<span class="fc" id="L33">        jRadioButton3.setEnabled(false);</span>
+<span class="fc" id="L34">        jRadioButton4.setEnabled(false);</span>
+<span class="fc" id="L35">        jButton1.setEnabled(false);</span>
+<span class="fc" id="L36">        jButton2.setEnabled(true);</span>
         
         //on initialise les voyants à éteint
-<span class="fc" id="L36">        moveLights(LightsEnum.ETEINT);</span>
-<span class="fc" id="L37">    }</span>
+<span class="fc" id="L39">        moveLights(LightsEnum.ETEINT);</span>
+<span class="fc" id="L40">    }</span>
 
+    /**
+     *
+     * @param s
+     */
     public void log(String s) {
-<span class="fc" id="L40">        textArea.append(s);</span>
-<span class="fc" id="L41">    }</span>
+<span class="fc" id="L47">        textArea.append(s);</span>
+<span class="fc" id="L48">    }</span>
 
     //Gestion des voyants
-    public void moveLights(LightsEnum couleur) {
-<span class="fc bfc" id="L45" title="All 2 branches covered.">        if (couleur == LightsEnum.ORANGE) {</span>
-<span class="fc" id="L46">            jRadioButton1.setSelected(false);</span>
-<span class="fc" id="L47">            jRadioButton2.setSelected(true);</span>
-<span class="fc" id="L48">            jRadioButton3.setSelected(false);</span>
-<span class="fc" id="L49">            jRadioButton4.setSelected(false);</span>
+
+    /**
+     *
+     * @param couleur
+     */
+        public void moveLights(LightsEnum couleur) {
+<span class="fc bfc" id="L57" title="All 2 branches covered.">        if (couleur == LightsEnum.ORANGE) {</span>
+<span class="fc" id="L58">            jRadioButton1.setSelected(false);</span>
+<span class="fc" id="L59">            jRadioButton2.setSelected(true);</span>
+<span class="fc" id="L60">            jRadioButton3.setSelected(false);</span>
+<span class="fc" id="L61">            jRadioButton4.setSelected(false);</span>
         }
 
-<span class="fc bfc" id="L52" title="All 2 branches covered.">        if (couleur == LightsEnum.ROUGE) {</span>
-<span class="fc" id="L53">            jRadioButton1.setSelected(true);</span>
-<span class="fc" id="L54">            jRadioButton2.setSelected(false);</span>
-<span class="fc" id="L55">            jRadioButton3.setSelected(false);</span>
-<span class="fc" id="L56">            jRadioButton4.setSelected(false);</span>
+<span class="fc bfc" id="L64" title="All 2 branches covered.">        if (couleur == LightsEnum.ROUGE) {</span>
+<span class="fc" id="L65">            jRadioButton1.setSelected(true);</span>
+<span class="fc" id="L66">            jRadioButton2.setSelected(false);</span>
+<span class="fc" id="L67">            jRadioButton3.setSelected(false);</span>
+<span class="fc" id="L68">            jRadioButton4.setSelected(false);</span>
         }
 
-<span class="fc bfc" id="L59" title="All 2 branches covered.">        if (couleur == LightsEnum.VERT) {</span>
-<span class="fc" id="L60">            jRadioButton1.setSelected(false);</span>
-<span class="fc" id="L61">            jRadioButton2.setSelected(false);</span>
-<span class="fc" id="L62">            jRadioButton3.setSelected(true);</span>
-<span class="fc" id="L63">            jRadioButton4.setSelected(false);</span>
+<span class="fc bfc" id="L71" title="All 2 branches covered.">        if (couleur == LightsEnum.VERT) {</span>
+<span class="fc" id="L72">            jRadioButton1.setSelected(false);</span>
+<span class="fc" id="L73">            jRadioButton2.setSelected(false);</span>
+<span class="fc" id="L74">            jRadioButton3.setSelected(true);</span>
+<span class="fc" id="L75">            jRadioButton4.setSelected(false);</span>
         }
 
-<span class="fc bfc" id="L66" title="All 2 branches covered.">        if (couleur == LightsEnum.ETEINT) {</span>
-<span class="fc" id="L67">            jRadioButton1.setSelected(false);</span>
-<span class="fc" id="L68">            jRadioButton2.setSelected(false);</span>
-<span class="fc" id="L69">            jRadioButton3.setSelected(false);</span>
-<span class="fc" id="L70">            jRadioButton4.setSelected(true);</span>
+<span class="fc bfc" id="L78" title="All 2 branches covered.">        if (couleur == LightsEnum.ETEINT) {</span>
+<span class="fc" id="L79">            jRadioButton1.setSelected(false);</span>
+<span class="fc" id="L80">            jRadioButton2.setSelected(false);</span>
+<span class="fc" id="L81">            jRadioButton3.setSelected(false);</span>
+<span class="fc" id="L82">            jRadioButton4.setSelected(true);</span>
         }
-<span class="fc" id="L72">    }</span>
+<span class="fc" id="L84">    }</span>
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -82,86 +94,86 @@ public final class View extends javax.swing.JFrame implements ActionListener {
 
         javax.swing.JLabel jLabel1;
         javax.swing.JLabel jLabel2;
-<span class="fc" id="L85">        textArea = new JTextArea(10, 20);</span>
-<span class="fc" id="L86">        textArea.setEditable(false);</span>
-<span class="fc" id="L87">        textArea.setLineWrap(true);</span>
-<span class="fc" id="L88">        textArea.setWrapStyleWord(true);</span>
-<span class="fc" id="L89">        textArea.setAutoscrolls(true);</span>
+<span class="fc" id="L97">        textArea = new JTextArea(10, 20);</span>
+<span class="fc" id="L98">        textArea.setEditable(false);</span>
+<span class="fc" id="L99">        textArea.setLineWrap(true);</span>
+<span class="fc" id="L100">        textArea.setWrapStyleWord(true);</span>
+<span class="fc" id="L101">        textArea.setAutoscrolls(true);</span>
 
-<span class="fc" id="L91">        jLabel2 = new javax.swing.JLabel();</span>
-<span class="fc" id="L92">        jButton1 = new javax.swing.JButton();</span>
-<span class="fc" id="L93">        jButton2 = new javax.swing.JButton();</span>
-<span class="fc" id="L94">        jRadioButton1 = new javax.swing.JRadioButton();</span>
+<span class="fc" id="L103">        jLabel2 = new javax.swing.JLabel();</span>
+<span class="fc" id="L104">        jButton1 = new javax.swing.JButton();</span>
+<span class="fc" id="L105">        jButton2 = new javax.swing.JButton();</span>
+<span class="fc" id="L106">        jRadioButton1 = new javax.swing.JRadioButton();</span>
 
-<span class="fc" id="L96">        jRadioButton2 = new javax.swing.JRadioButton();</span>
-<span class="fc" id="L97">        jRadioButton3 = new javax.swing.JRadioButton();</span>
-<span class="fc" id="L98">        jRadioButton4 = new javax.swing.JRadioButton();</span>
-<span class="fc" id="L99">        jLabel1 = new javax.swing.JLabel();</span>
-<span class="fc" id="L100">        jLabel2.setText(&quot;jLabel2&quot;);</span>
+<span class="fc" id="L108">        jRadioButton2 = new javax.swing.JRadioButton();</span>
+<span class="fc" id="L109">        jRadioButton3 = new javax.swing.JRadioButton();</span>
+<span class="fc" id="L110">        jRadioButton4 = new javax.swing.JRadioButton();</span>
+<span class="fc" id="L111">        jLabel1 = new javax.swing.JLabel();</span>
+<span class="fc" id="L112">        jLabel2.setText(&quot;jLabel2&quot;);</span>
 
-<span class="fc" id="L102">        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);</span>
+<span class="fc" id="L114">        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);</span>
 
-<span class="fc" id="L104">        jButton1.setText(&quot;Up&quot;);</span>
-<span class="fc" id="L105">        jButton1.addActionListener(this);</span>
-<span class="fc" id="L106">        jButton2.addActionListener(this);</span>
+<span class="fc" id="L116">        jButton1.setText(&quot;Up&quot;);</span>
+<span class="fc" id="L117">        jButton1.addActionListener(this);</span>
+<span class="fc" id="L118">        jButton2.addActionListener(this);</span>
 
-<span class="fc" id="L108">        jButton2.setText(&quot;Down&quot;);</span>
+<span class="fc" id="L120">        jButton2.setText(&quot;Down&quot;);</span>
 
-<span class="fc" id="L110">        jRadioButton1.setText(&quot;Rouge - Panne&quot;);</span>
-<span class="fc" id="L111">        jRadioButton2.setText(&quot;Orange - En mouvement&quot;);</span>
-<span class="fc" id="L112">        jRadioButton3.setText(&quot;Vert - Train d'atterissage sorti&quot;);</span>
-<span class="fc" id="L113">        jRadioButton4.setText(&quot;Eteint - Train rentré&quot;);</span>
-<span class="fc" id="L114">        jLabel1.setText(&quot;Manette&quot;);</span>
+<span class="fc" id="L122">        jRadioButton1.setText(&quot;Rouge - Panne&quot;);</span>
+<span class="fc" id="L123">        jRadioButton2.setText(&quot;Orange - En mouvement&quot;);</span>
+<span class="fc" id="L124">        jRadioButton3.setText(&quot;Vert - Train d'atterissage sorti&quot;);</span>
+<span class="fc" id="L125">        jRadioButton4.setText(&quot;Eteint - Train rentré&quot;);</span>
+<span class="fc" id="L126">        jLabel1.setText(&quot;Manette&quot;);</span>
 
-<span class="fc" id="L116">        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());</span>
-<span class="fc" id="L117">        getContentPane().setLayout(layout);</span>
-<span class="fc" id="L118">        layout.setHorizontalGroup(</span>
-<span class="fc" id="L119">                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="fc" id="L120">                .addGroup(layout.createSequentialGroup()</span>
-<span class="fc" id="L121">                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="fc" id="L122">                                .addGroup(layout.createSequentialGroup()</span>
-<span class="fc" id="L123">                                        .addGap(33, 33, 33)</span>
-<span class="fc" id="L124">                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="fc" id="L125">                                                .addComponent(jRadioButton4)</span>
-<span class="fc" id="L126">                                                .addComponent(jRadioButton2)</span>
-<span class="fc" id="L127">                                                .addComponent(jRadioButton3)</span>
-<span class="fc" id="L128">                                                .addComponent(jRadioButton1)))</span>
-<span class="fc" id="L129">                                .addGroup(layout.createSequentialGroup()</span>
-<span class="fc" id="L130">                                        .addGap(117, 117, 117)</span>
-<span class="fc" id="L131">                                        .addComponent(jButton1)</span>
-<span class="fc" id="L132">                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
-<span class="fc" id="L133">                                        .addComponent(jButton2))</span>
+<span class="fc" id="L128">        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());</span>
+<span class="fc" id="L129">        getContentPane().setLayout(layout);</span>
+<span class="fc" id="L130">        layout.setHorizontalGroup(</span>
+<span class="fc" id="L131">                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="fc" id="L132">                .addGroup(layout.createSequentialGroup()</span>
+<span class="fc" id="L133">                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
 <span class="fc" id="L134">                                .addGroup(layout.createSequentialGroup()</span>
-<span class="fc" id="L135">                                        .addGap(173, 173, 173)</span>
-<span class="fc" id="L136">                                        .addComponent(jLabel1))</span>
-<span class="fc" id="L137">                                .addGap(173, 173, 173)</span>
-<span class="fc" id="L138">                                .addComponent(textArea))</span>
-<span class="fc" id="L139">                        .addContainerGap(131, Short.MAX_VALUE))</span>
+<span class="fc" id="L135">                                        .addGap(33, 33, 33)</span>
+<span class="fc" id="L136">                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="fc" id="L137">                                                .addComponent(jRadioButton4)</span>
+<span class="fc" id="L138">                                                .addComponent(jRadioButton2)</span>
+<span class="fc" id="L139">                                                .addComponent(jRadioButton3)</span>
+<span class="fc" id="L140">                                                .addComponent(jRadioButton1)))</span>
+<span class="fc" id="L141">                                .addGroup(layout.createSequentialGroup()</span>
+<span class="fc" id="L142">                                        .addGap(117, 117, 117)</span>
+<span class="fc" id="L143">                                        .addComponent(jButton1)</span>
+<span class="fc" id="L144">                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
+<span class="fc" id="L145">                                        .addComponent(jButton2))</span>
+<span class="fc" id="L146">                                .addGroup(layout.createSequentialGroup()</span>
+<span class="fc" id="L147">                                        .addGap(173, 173, 173)</span>
+<span class="fc" id="L148">                                        .addComponent(jLabel1))</span>
+<span class="fc" id="L149">                                .addGap(173, 173, 173)</span>
+<span class="fc" id="L150">                                .addComponent(textArea))</span>
+<span class="fc" id="L151">                        .addContainerGap(131, Short.MAX_VALUE))</span>
         );
-<span class="fc" id="L141">        layout.setVerticalGroup(</span>
-<span class="fc" id="L142">                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="fc" id="L143">                .addGroup(layout.createSequentialGroup()</span>
-<span class="fc" id="L144">                        .addGap(17, 17, 17)</span>
-<span class="fc" id="L145">                        .addComponent(jLabel1)</span>
-<span class="fc" id="L146">                        .addGap(18, 18, 18)</span>
-<span class="fc" id="L147">                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
-<span class="fc" id="L148">                                .addComponent(jButton1)</span>
-<span class="fc" id="L149">                                .addComponent(jButton2))</span>
-<span class="fc" id="L150">                        .addGap(18, 18, 18)</span>
-<span class="fc" id="L151">                        .addComponent(jRadioButton4)</span>
-<span class="fc" id="L152">                        .addGap(3, 3, 3)</span>
-<span class="fc" id="L153">                        .addComponent(jRadioButton1)</span>
-<span class="fc" id="L154">                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
-<span class="fc" id="L155">                        .addComponent(jRadioButton2)</span>
-<span class="fc" id="L156">                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
-<span class="fc" id="L157">                        .addComponent(jRadioButton3)</span>
-<span class="fc" id="L158">                        .addGap(30, 30, 30)</span>
-<span class="fc" id="L159">                        .addComponent(textArea)</span>
-<span class="fc" id="L160">                        .addContainerGap(95, Short.MAX_VALUE))</span>
+<span class="fc" id="L153">        layout.setVerticalGroup(</span>
+<span class="fc" id="L154">                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="fc" id="L155">                .addGroup(layout.createSequentialGroup()</span>
+<span class="fc" id="L156">                        .addGap(17, 17, 17)</span>
+<span class="fc" id="L157">                        .addComponent(jLabel1)</span>
+<span class="fc" id="L158">                        .addGap(18, 18, 18)</span>
+<span class="fc" id="L159">                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="fc" id="L160">                                .addComponent(jButton1)</span>
+<span class="fc" id="L161">                                .addComponent(jButton2))</span>
+<span class="fc" id="L162">                        .addGap(18, 18, 18)</span>
+<span class="fc" id="L163">                        .addComponent(jRadioButton4)</span>
+<span class="fc" id="L164">                        .addGap(3, 3, 3)</span>
+<span class="fc" id="L165">                        .addComponent(jRadioButton1)</span>
+<span class="fc" id="L166">                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
+<span class="fc" id="L167">                        .addComponent(jRadioButton2)</span>
+<span class="fc" id="L168">                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
+<span class="fc" id="L169">                        .addComponent(jRadioButton3)</span>
+<span class="fc" id="L170">                        .addGap(30, 30, 30)</span>
+<span class="fc" id="L171">                        .addComponent(textArea)</span>
+<span class="fc" id="L172">                        .addContainerGap(95, Short.MAX_VALUE))</span>
         );
 
-<span class="fc" id="L163">        pack();</span>
-<span class="fc" id="L164">    }// &lt;/editor-fold&gt;                        </span>
+<span class="fc" id="L175">        pack();</span>
+<span class="fc" id="L176">    }// &lt;/editor-fold&gt;                        </span>
 
     // Variables declaration - do not modify                     
     private javax.swing.JButton jButton1;
@@ -174,27 +186,27 @@ public final class View extends javax.swing.JFrame implements ActionListener {
     // End of variables declaration
     @Override
     public void actionPerformed(ActionEvent e) {
-<span class="fc" id="L177">        Object source = e.getSource();</span>
+<span class="fc" id="L189">        Object source = e.getSource();</span>
 
         //Handle UP
-<span class="fc bfc" id="L180" title="All 2 branches covered.">        if (source.equals(jButton2)) {</span>
-<span class="fc" id="L181">            manette.setPosition(HandleEnum.BAS);</span>
-<span class="fc" id="L182">            textArea.append(&quot;Début de la séquence d'atterissage\n&quot;);</span>
+<span class="fc bfc" id="L192" title="All 2 branches covered.">        if (source.equals(jButton2)) {</span>
+<span class="fc" id="L193">            manette.setPosition(HandleEnum.BAS);</span>
+<span class="fc" id="L194">            textArea.append(&quot;Début de la séquence d'atterissage\n&quot;);</span>
             //Simulation de la manette : quand elle est en position basse on ne peut plus appuyer sur down et inversement
-<span class="fc" id="L184">            jButton2.setEnabled(false);</span>
-<span class="fc" id="L185">            jButton1.setEnabled(true);</span>
-<span class="fc" id="L186">            soft.doSoft(manette, this);</span>
+<span class="fc" id="L196">            jButton2.setEnabled(false);</span>
+<span class="fc" id="L197">            jButton1.setEnabled(true);</span>
+<span class="fc" id="L198">            soft.doSoft(manette, this);</span>
 
             //Handle Down
-<span class="pc bpc" id="L189" title="1 of 2 branches missed.">        } else if (source.equals(jButton1)) {</span>
-<span class="fc" id="L190">            manette.setPosition(HandleEnum.HAUT);</span>
-<span class="fc" id="L191">            textArea.append(&quot;Début de la séquence de décollage\n&quot;);</span>
+<span class="pc bpc" id="L201" title="1 of 2 branches missed.">        } else if (source.equals(jButton1)) {</span>
+<span class="fc" id="L202">            manette.setPosition(HandleEnum.HAUT);</span>
+<span class="fc" id="L203">            textArea.append(&quot;Début de la séquence de décollage\n&quot;);</span>
             //Simulation de la manette : quand elle est en position basse on ne peut plus appuyer sur down et inversement
-<span class="fc" id="L193">            jButton1.setEnabled(false);</span>
-<span class="fc" id="L194">            jButton2.setEnabled(true);</span>
-<span class="fc" id="L195">            soft.doSoft(manette, this);</span>
+<span class="fc" id="L205">            jButton1.setEnabled(false);</span>
+<span class="fc" id="L206">            jButton2.setEnabled(true);</span>
+<span class="fc" id="L207">            soft.doSoft(manette, this);</span>
 
         }
-<span class="fc" id="L198">    }</span>
+<span class="fc" id="L210">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.2.201409121644</span></div></body></html>

@@ -67,7 +67,7 @@ public class LightsTest {
     public void testAnimLights() {
         System.out.println("animLights");
         Handle manette = new Handle();
-        manette.setPosition(HandleEnum.BAS);
+        manette.setPosition(HandleEnum.HAUT);
         Wheels roue1 = new Wheels();
         Wheels roue2 = new Wheels();
         Wheels roue3 = new Wheels();
@@ -75,7 +75,7 @@ public class LightsTest {
         Doors porte2 = new Doors();
         Doors porte3 = new Doors();
         Lights instance = new Lights();
-        LightsEnum expResult = LightsEnum.ORANGE;
+        LightsEnum expResult = LightsEnum.ETEINT;
         LightsEnum result = instance.animLights(manette, roue1, roue2, roue3, porte1, porte2, porte3);
         assertEquals(expResult, result);
     }
